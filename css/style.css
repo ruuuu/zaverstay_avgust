@@ -1,0 +1,134 @@
+body{       /*font-family: 'Playfair Display', serif;*/
+    min-width: 1200px; /*ширина контенат*/
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    font-family: "Montserrat", sans-serif;
+    color: rgba(174, 124, 120, 1);
+    background-color: #E5E5E5;
+    font-stretch: normal;
+    letter-spacing: normal;
+
+}
+
+                                    /*общие стили*/
+a{
+  text-decoration: none;
+}
+
+h1,h1,h3,h4,h5,h6, p{
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  /* height: auto; */
+}
+
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.button{
+  border: none;
+  background-color: rgba(216, 153, 153, 1);
+  border-radius: 40px;
+  padding: 30px 68px;
+  color: #fff;
+  line-height:  ;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+.button:hover,
+.button:focus{
+  background-color: #ca2c37;
+}
+
+
+.button:active{
+  background-color: #ba2732;
+}
+
+
+.container{
+    width: 1180px; /*ширина контента 1200 = 1180+ паддинги по 10 px*/ 
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/*----------------*/
+
+
+.author-bukets{
+  padding-top: 82px;
+  padding-bottom: 40px;
+}
+
+.author-bukets__catalog{
+  display: flex;
+}
+
+.catalog{
+  margin-bottom: 48px;
+}
+
+.catalog__block{
+  width: 384px;
+  margin-right: 20px;
+}
+
+.catalog__photo{
+  border-radius: 10px;
+  border: none;
+  margin-right: 20px;
+}
+
+.tulpan{
+  margin-top: auto; /*флекс элемент прижмется к низу родителя*/
+  height: 404px;
+  
+}
+
+.rose{
+  margin-bottom: auto; /*флекс элемент прижмется к верху родителя*/
+  height: 404px;
+}
+
+.features{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 45px;
+}
+
+.features__item{
+  display: flex;
+  width: 285px;
+}
+
+.features__img{ /* флекс элемент */
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: auto;
+}
+
+.features__title{
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
+
+.features__description{
+  font-weight: 400;
+
+}
