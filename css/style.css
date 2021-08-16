@@ -65,6 +65,7 @@ ul{
 }
 
 .title{
+  margin-bottom: 36px;
   color: rgba(174, 124, 120, 1);
   text-align: center;
   font-weight: 700;
@@ -237,4 +238,32 @@ ul{
 }
   
 
+.steps{
+  margin-bottom: 80px;
+}
+
+.steps__list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 20px;
+
+}
+
+.steps__item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 285px;
+}
+
+
+
+.steps__image{
+  display: block;
+  margin-bottom: 18px;
+}
+
+.steps__title{
+  margin-bottom: 8px;
+}
 
