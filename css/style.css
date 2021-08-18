@@ -1,5 +1,5 @@
 *{
-  /* box-sizing: border-box; */
+  box-sizing: border-box; 
 }
 
 
@@ -93,7 +93,7 @@ ul{
 }
 
 .catalog{
-  margin-bottom: 48px;
+  padding-bottom: 48px;
 }
 
 .catalog__block{
@@ -150,7 +150,7 @@ ul{
 
 
 .popular{
-  margin-bottom: 80px;
+  padding-bottom: 80px;
 }
 
 
@@ -215,7 +215,7 @@ ul{
 
 .discount{
   /* max-width: 1200px; ширина кнтента */
-  margin-bottom: 80px;
+  padding-bottom: 80px;
 }
 
 .discount__inner{
@@ -239,7 +239,7 @@ ul{
   
 
 .steps{
-  margin-bottom: 80px;
+  padding-bottom: 80px;
 }
 
 .steps__list{
@@ -267,3 +267,32 @@ ul{
   margin-bottom: 8px;
 }
 
+.news{
+  padding-bottom: 80px;
+}
+
+
+.reviews{
+  padding-bottom: 80px;
+}
+
+.reviews__inner{
+  border: 1px solid #AE7C78;
+  padding-left: 44px;
+  padding-right: 44px;
+  padding-top: 40px;
+  padding-bottom: 64px;
+}
+
+.reviews__list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 106px;
+}
+
+.footer{
+  background-image: url("../img/map.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
