@@ -176,6 +176,50 @@ ul {
   width: 285px;
 }
 
+
+.features__box{
+  position: relative;
+  padding-left: 80px; /*метсо для иконки*/
+}
+
+
+.features__item .features__box:first-child{
+  padding-left: 120px;
+}
+
+
+
+.features__box--feature1{
+  background-image: url("../img/f1.svg");
+  background-repeat: no-repeat;
+  background-size: 82px 52px;
+}
+
+.features__box--feature2{
+  background-image: url("../img/f2.svg");
+  background-size: 52px 52px;
+  background-repeat: no-repeat;
+}
+
+.features__box--feature3{
+  background-image: url("../img/f3.svg");
+  background-size: 58px 52px;
+  background-repeat: no-repeat;
+}
+
+
+
+.features__box::before{
+  content: " ";
+  position: absolute;
+  
+  left: 0;
+  width: 82px;
+  height: 52px;
+  
+}
+
+
 .features__img {
   /* флекс элемент */
   display: inline-block;
