@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- тэг artcile независимый самостоятельный , его можно переиспользоать на др станицах сервиса-->
+<!--тэг section  это смысловой блок завситот своего места в потоке, котрый включает в себя маленькие блоки-->
+<!--фото всегда экспортирвкме в формате jpeg, а если у кртинки есть прозрачность то в png-->
 
 <head>
   <meta charset="UTF-8">
@@ -19,7 +22,7 @@
 <body>
   <header class="header">
     <div class="container">
-      <div class="header__inner">
+      <nav class="header__inner">
         <!--флекс контегнйер-->
         <ul class="header__menu menu">
           <li class="menu__item">
@@ -33,7 +36,9 @@
           </li>
         </ul>
 
-        <a href=""><img src="img/Лого.svg" width="100" height="33" alt="logo"></a>
+        <a href="">
+          <img src="img/Лого.svg" width="100" height="33" alt="logo">
+        </a>
 
         <ul class="header__menu menu">
           <li class="menu__item">
@@ -46,7 +51,7 @@
             <a class="menu__link" href="">Корзина</a>
           </li>
         </ul>
-      </div>
+      </nav>
     </div>
   </header>
 
@@ -74,6 +79,7 @@
               <p class="features__description">Можем собрать букет и передать его в доставку всего за час.</p>
             </div>
           </li>
+
           <li class="features__item">
             <!--грид элемент-->
             <!--<img class="features__img" src="img/f2.svg" width="52" height="52" alt="flowers">-->
@@ -84,6 +90,7 @@
                 букетов каждый цветок.</p>
             </div>
           </li>
+
           <li class="features__item">
             <!--грид элемент-->
             <!--<img class="features__img" src="img/f3.svg" width="59" height="52" alt="photo">-->
@@ -99,16 +106,29 @@
     <section class="popular">
       <div class="container">
         <div class="title">Популярные букеты</div>
-        <div class="popular__inner">
-          <div class="popular__box">
-            <h3 class="popular__title">Букет «Нежность»</h3>
-            <p class="popular__description">Элегантный букет, который станет отличным подарком на день рождения или
-              юбилей.</p>
-            <p class="popular__size">30 × 40 см</p>
-            <p class="popular price">3600 руб.</p>
-            <a href="#" class="button">Заказать</a>
+        <div class="slider">
+          <!--popular__inner-->
+          <div class="slider__item">
+            <!--popular__box-->
+            <div class="slider__description">
+              <h3 class="popular__title">Букет «Нежность»</h3>
+              <p class="popular__description">Элегантный букет, который станет отличным подарком на день рождения или
+                юбилей.</p>
+              <p class="popular__size">30 × 40 см</p>
+              <p class="popular price">3600 руб.</p>
+              <a href="#" class="button">Заказать</a>
+            </div>
+            <img class="slider__preview" src="img/1.png" width="387" height="438" alt="buket">
           </div>
-          <img src="img/1.png" width="387" height="438" alt="buket">
+
+          <div class="slider__controls">
+            <button type="button">
+              <span class="visually-hidden">Назад</span>
+            </button>
+            <button type="button">
+              <span class="visually-hidden">Вперед</span>
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -117,27 +137,34 @@
       <div class="container">
         <ul class="feature-buckets__list">
           <li class="feature-buckets__item">
-            <img class="feature-buckets__img" src="img/bucket1.png" width="388" height="442" alt="item1">
-            <div class="feature-buckets__box">
-              <span class="feature-buckets__title">Свадебные букеты</span>
-              <span class="feature-buckets__description">Букеты для невест</span>
-            </div>
+            <a href="">
+              <!--картинки извлечь в флрмате jpeg-->
+              <img class="feature-buckets__img" src="img/bucket1.png" width="388" height="442" alt="item1">
+              <div class="feature-buckets__box">
+                <span class="feature-buckets__title">Свадебные букеты</span>
+                <span class="feature-buckets__description">Букеты для невест</span>
+              </div>
+            </a>
           </li>
 
           <li class="feature-buckets__item">
-            <img class="feature-buckets__img" src="img/bucket2.png" width="388" height="442" alt="item2">
-            <div class="feature-buckets__box">
-              <span class="feature-buckets__title">Букеты с пионами</span>
-              <span class="feature-buckets__description">Букеты с сезонными пионами</span>
-            </div>
+            <a href="">
+              <img class="feature-buckets__img" src="img/bucket2.png" width="388" height="442" alt="item2">
+              <div class="feature-buckets__box">
+                <span class="feature-buckets__title">Букеты с пионами</span>
+                <span class="feature-buckets__description">Букеты с сезонными пионами</span>
+              </div>
+            </a>
           </li>
 
           <li class="feature-buckets__item">
-            <img class="feature-buckets__img" src="img/bucket3png.png" width="388" height="442" alt="item3">
-            <div class="feature-buckets__box">
-              <span class="feature-buckets__title">Выбрать букет</span>
-              <span class="feature-buckets__description">Букеты в ассортименте</span>
-            </div>
+            <a href="">
+              <img class="feature-buckets__img" src="img/bucket3png.png" width="388" height="442" alt="item3">
+              <div class="feature-buckets__box">
+                <span class="feature-buckets__title">Выбрать букет</span>
+                <span class="feature-buckets__description">Букеты в ассортименте</span>
+              </div>
+            </a>
           </li>
         </ul>
       </div>
@@ -152,6 +179,7 @@
             <div class="discount__text">Если заказываете у нас букет впервые — при оформлении заказа введите промокод
               «Botanika2021» и получите скидку 10%.</div>
           </div>
+          <!--фото извлчь в jpeg-->
           <img class="discount__image" src="img/florist.png" width="590" height="391" alt="discount__image">
         </div>
       </div>
@@ -162,25 +190,25 @@
         <div class="title">4 шага к идеальному букету</div>
         <ul class="steps__list">
           <li class="steps__item">
-            <!--<img class="steps__image" src="img/step1.svg" width="66" height="52" alt="order">-->
+            <!-- декоративное изображение это сделат псевдоэлементом <img class="steps__image" src="img/step1.svg" width="66" height="52" alt="order">-->
             <h3 class="steps__title">Заказ</h3>
             <p class="steps__descriptionqs">Выбирите понравившейся букет из каталога и оформите заказ</p>
           </li>
 
           <li class="steps__item">
-            <!--<img class="steps__image" src="img/step2.svg" width="37" height="52" alt="order">-->
+            <!--это сделат псевдоэлементом <img class="steps__image" src="img/step2.svg" width="37" height="52" alt="order">-->
             <h3 class="steps__title">Уточнение деталей</h3>
             <p class="steps__descriptionqs">Выбирите понравившейся букет из каталога и оформите заказ</p>
           </li>
 
           <li class="steps__item">
-            <!--<img class="steps__image" src="img/step3.svg" width="69" height="52" alt="order">-->
+            <!--это сделат псевдоэлементом <img class="steps__image" src="img/step3.svg" width="69" height="52" alt="order">-->
             <h3 class="steps__title">Оплата</h3>
             <p class="steps__descriptionqs">Оплатить заказ можно онлайн на сайте или при получении</p>
           </li>
 
           <li class="steps__item">
-            <img class="steps__image" src="img/step4.svg" width="82" height="52" alt="order">
+            <!--<img class="steps__image" src="img/step4.svg" width="82" height="52" alt="order">-->
             <h3 class="steps__title">Доставка</h3>
             <p class="steps__descriptionqs">Курьер позвонит за час до прибытия и доставит заказ вовремя</p>
           </li>
@@ -201,6 +229,7 @@
             </ul>
           </div>
           <div class="news__images">
+            <!--так как фото поэтому  jpeg-->
             <img src="img/new1.png" width="285" height="220" alt="new1">
             <img src="img/new3.jpg" width="387" height="460" alt="new3">
             <img src="img/new2.jpg" width="285" height="220" alt="new2">
@@ -257,11 +286,11 @@
       </p>
       <p class="offer__info">
         <span class="offer__text">Позвоните нам:</span>
-        <span class="offer__text">+ 7 (812) 983-47-19</span>
+        <a href="tel:+78129834719" class="offer__text">+ 7 (812) 983-47-19</a>
       </p>
       <p class="offer__info">
         <span class="offer__text">Напишите нам:</span>
-        <span class="offer__text">info@botanika.ru</span>
+        <a href="mailto:info@botanika.ru" class="offer__text">info@botanika.ru</a>
       </p>
     </div>
 
@@ -292,13 +321,13 @@
 
           <ul class="footer__socials">
             <li class="footer__socials-item">
-              <a class="footer__socials-link" href="">Инста</a>
+              <a class="footer__socials-link" href=""><span class="visually-hidden">Инста</span></a>
             </li>
             <li class="footer__socials-item">
-              <a class="footer__socials-link" href="">fb</a>
+              <a class="footer__socials-link" href=""><span class="visually-hidden">fb</span></a>
             </li>
             <li class="footer__socials-item">
-              <a class="footer__socials-link" href="">Twitter</a>
+              <a class="footer__socials-link" href=""><span class="visually-hidden">Twitter</span></a>
             </li>
           </ul>
         </div>
