@@ -1,25 +1,26 @@
-/*шрифты берем отсда https://fontstorage.com/ru/*/
+/*шрифты берем отсда https://fontstorage.com/ru/ и https://www.cssfontstack.com/*/
+/*как поключить шрифты https://htmlacademy.ru/blog/boost/tutorial/fonts-loading*/
 
 /*Для улучшения производительности правило @font-face лучше всего прописывать в самом начале CSS-файла. */
-@font-face {
+/* @font-face {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
-  /* Браузер сначала попробует найти шрифт локально(то есть системнй) */
+  /* Браузер сначала попробует найти шрифт локально(то есть системнй) 
   src: local("Roboto"),
-      /* Если не получилось, загрузит woff2(новее фрмат) */
+      /* Если не получилось, загрузит woff2(новее фрмат) 
       url("../fonts/Montserrat.woff2") format("woff2"),
-       /* Если браузер не поддерживает woff2, загрузит woff */
+      /* Если браузер не поддерживает woff2, загрузит woff 
       url("../fonts/Montserrat.woff") format("woff");
-}
+} */
 
-* {
-  box-sizing: border-box;
+*, *::before, *::after {
+  box-sizing: border-box; /*border и padding входят в ширину контента*/
 }
 
 
 body {
-  /*font-family: 'Playfair Display', serif;*/
+  
   min-width: 1200px;
   /*ширина контенат*/
   margin: 0;
@@ -28,7 +29,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif; /*sans-serif значит без засечек*/
   color: rgba(174, 124, 120, 1);
   background-color: #E5E5E5;
   font-stretch: normal;
@@ -69,13 +70,17 @@ ul {
   border-radius: 40px;
   padding: 30px 68px;
   color: #fff;
-  line-height: ;
+  line-height: 20px;
   text-align: center;
   vertical-align: middle;
   font-weight: normal;
   font-style: normal;
 
 }
+
+/*.button:hover,
+.button:focus,
+.button:active*/
 
 .button:hover,
 .button:focus {
@@ -95,7 +100,8 @@ ul {
   font-weight: 700;
   font-size: 36px;
   line-height: 48px;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif; /*serif значит с засечками*/
+  letter-spacing: 0.02 em; /*превратиь % в em */
 }
 
 .container {
@@ -103,6 +109,25 @@ ul {
   /*ширина контента 1200 = 1180+ паддинги по 10 px*/
   margin: 0 auto;
   padding: 0 10px;
+}
+
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /*----------------*/
@@ -114,6 +139,7 @@ ul {
 }
 
 .header__inner {
+  /* max-width: 1062px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -128,6 +154,10 @@ ul {
 }
 
 
+.menu__item{
+  flex-grow: 1;
+}
+
 .menu__item:not(:last-child) {
   /*у всех кроме послденего*/
   margin-right: 89px;
@@ -135,10 +165,15 @@ ul {
 
 .menu__link {
   /*a*/
-  display: block;
+  display: inline-block;
   padding: 22px 0;
+  vertical-align: middle;
   color: rgba(174, 124, 120, 1);
+}
 
+.menu__link:hover,
+.menu__link:focus{
+  color: rgba(216, 153, 153, 1);
 }
 
 
@@ -152,6 +187,8 @@ ul {
   display: flex;
 }
 
+
+
 .catalog {
   padding-bottom: 48px;
 }
@@ -161,24 +198,54 @@ ul {
   margin-right: 20px;
 }
 
+.catalog__block h1{
+  width: 100%;
+  font-family: "Playfair Display", "Arial", serif;
+  font-size: 44px;
+  line-height: 58px;
+  font-weight: 400;
+
+}
+
+
+.catalog__block span{
+  font-style: italic;
+}
+
+.catalog__block h2{
+  margin-bottom: 64px;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 400;
+}
+
+.catalog__button{
+  display: inline-block;
+}
+
 .catalog__photo {
   border-radius: 10px;
   border: none;
   margin-right: 20px;
 }
 
+
+
 .tulpan {
   margin-top: auto;
   /*флекс элемент прижмется к низу родителя*/
   height: 404px;
+  margin-right: 20px;
 
 }
 
 .rose {
   margin-bottom: auto;
   /*флекс элемент прижмется к верху родителя*/
-  height: 404px;
+  height: 420px;
 }
+
+
 
 .features {
   display: grid;
@@ -191,47 +258,46 @@ ul {
   width: 285px;
 }
 
-
-.features__box{
+.features__box{ /*родитель для иконки, относительно этого позиционируем иконки*/
   position: relative;
-  padding-left: 80px; /*метсо для иконки*/
+  
+  padding-left: 20px; /*метсо для иконки*/
 }
-
 
 .features__item .features__box:first-child{
-  padding-left: 120px;
+  /* padding-left: 120px; */
 }
-
-
-
-.features__box--feature1{
-  background-image: url("../img/f1.svg");
-  background-repeat: no-repeat;
-  background-size: 82px 52px;
-}
-
-.features__box--feature2{
-  background-image: url("../img/f2.svg");
-  background-size: 52px 52px;
-  background-repeat: no-repeat;
-}
-
-.features__box--feature3{
-  background-image: url("../img/f3.svg");
-  background-size: 58px 52px;
-  background-repeat: no-repeat;
-}
-
 
 
 .features__box::before{
-  content: " ";
+  content: "";
   position: absolute;
   
   left: 0;
   width: 82px;
   height: 52px;
   
+}
+
+.features__box--feature1{
+  background-image: url("../img/f1.svg");
+  background-size: 82px 52px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+} 
+
+.features__box--feature2{
+  background-image: url("../img/f2.svg");
+  background-size: 52px 52px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.features__box--feature3{
+  background-image: url("../img/f3.svg");
+  background-size: 58px 52px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 
@@ -251,15 +317,16 @@ ul {
 }
 
 .features__description {
+  width: 285px;
   font-weight: 400;
 
 }
 
 
+
 .popular {
   padding-bottom: 80px;
 }
-
 
 .popular__inner {
   /*флекс контенйр*/
@@ -289,11 +356,9 @@ ul {
 
 }
 
-
 .feature-buckets__img {
   display: block;
   border-radius: 10px;
-
 }
 
 .feature-buckets__box {
@@ -312,10 +377,10 @@ ul {
   margin: 0 auto;
 }
 
-
 .feature-buckets__title {}
 
 .feature-buckets__description {}
+
 
 
 .discount {
@@ -343,6 +408,7 @@ ul {
 }
 
 
+
 .steps {
   padding-bottom: 80px;
 }
@@ -351,7 +417,6 @@ ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 20px;
-
 }
 
 .steps__item {
@@ -360,8 +425,6 @@ ul {
   align-items: center;
   max-width: 285px;
 }
-
-
 
 .steps__image {
   display: block;
@@ -372,9 +435,12 @@ ul {
   margin-bottom: 8px;
 }
 
+
+
 .news {
   padding-bottom: 80px;
 }
+
 
 
 .reviews {
@@ -395,10 +461,9 @@ ul {
   column-gap: 106px;
 }
 
+
+
 .footer {}
-
-
-
 
 
 .footer__map {
@@ -451,11 +516,9 @@ ul {
   margin-right: 65px;
 }
 
-
 .footer__menu-links {
   color: rgba(255, 255, 255, 1);
 }
-
 
 .footer__socials {
   display: flex;

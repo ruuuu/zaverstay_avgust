@@ -2,7 +2,9 @@
 <html lang="en">
 <!-- тэг artcile независимый самостоятельный , его можно переиспользоать на др станицах сервиса-->
 <!--тэг section  это смысловой блок завситот своего места в потоке, котрый включает в себя маленькие блоки-->
-<!--фото всегда экспортирвкме в формате jpeg, а если у кртинки есть прозрачность то в png-->>
+<!--фото всегда экспортирвкме в формате jpeg, а если у кртинки есть прозрачность то в png-->
+<!-- sanitize.css  https://github.com/csstools/sanitize.css это как normalize.css но к тому же еще правит еще  и кросс-браузерные баги-->
+<!--Font Fascia(у меня стоит) плагин в фигме котрый показывает какие шрифты используются в макете-->
 
 <head>
   <meta charset="UTF-8">
@@ -10,11 +12,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Playfair+Display:wght@700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
+  <!--стили всегда повключаем после шрифтов-->
   <link rel="stylesheet" href="css/style.css">
   <title>Магазин цветов</title>
 </head>
@@ -60,9 +64,9 @@
       <div class="container">
         <div class="author-bukets__catalog catalog">
           <div class="catalog__block">
-            <h1>Авторские букеты<span>в Петербурге</span></h1>
+            <h1>Авторские букеты <span> в Петербурге</span></h1>
             <h2>Оригинальные свежие букеты с доставкой по всему городу</h2>
-            <a class="button" href="">Смотреть каталог</a>
+            <a class="button catalog__button" href="">Смотреть каталог</a>
           </div>
           <img class="catalog__photo tulpan" src="img/author1.jpg" width="386" height="404" alt="tulpan">
           <img class="catalog__photo rose" src="img/author2.jpg" width="387" height="420" alt="rose">
@@ -72,8 +76,7 @@
           <!--грид контенйер-->
           <li class="features__item">
             <!--грид элемент-->
-            <!--вметсо img вставить псевоэлемент!!! https://htmlacademy.ru/blog/boost/frontend/content-or-decor-img-->
-            <!--<img class="features__img" src="img/f1.svg" width="82" height="52" alt="delivery">-->
+            <!--вметсо img вставить псевдоэлемент!!! https://htmlacademy.ru/blog/boost/frontend/content-or-decor-img-->
             <div class="features__box features__box--feature1">
               <h3 class="features__title">Быстрая доставка</h3>
               <p class="features__description">Можем собрать букет и передать его в доставку всего за час.</p>
@@ -82,8 +85,6 @@
 
           <li class="features__item">
             <!--грид элемент-->
-            <!--<img class="features__img" src="img/f2.svg" width="52" height="52" alt="flowers">-->
-
             <div class="features__box features__box--feature2">
               <h3 class="features__title">Всегда свежие цветы</h3>
               <p class="features__description">Тщательно следим за состоянием цветов, а опытные флористы отбирают для
@@ -93,7 +94,6 @@
 
           <li class="features__item">
             <!--грид элемент-->
-            <!--<img class="features__img" src="img/f3.svg" width="59" height="52" alt="photo">-->
             <div class="features__box features__box--feature3">
               <h3 class="features__title">Отправляем фото цветов</h3>
               <p class="features__description">Перед доставкой сделаем фотографию букета и отправим вам.</p>
