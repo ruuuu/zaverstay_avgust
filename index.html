@@ -74,30 +74,25 @@
 
         <ul class="author-bukets__features features">
           <!--грид контенйер-->
-          <li class="features__item">
-            <!--грид элемент-->
-            <!--вметсо img вставить псевдоэлемент!!! https://htmlacademy.ru/blog/boost/frontend/content-or-decor-img-->
-            <div class="features__box features__box--feature1">
-              <h3 class="features__title">Быстрая доставка</h3>
-              <p class="features__description">Можем собрать букет и передать его в доставку всего за час.</p>
-            </div>
+
+          <!--грид элемент-->
+          <!--вметсо img вставить псевдоэлемент!!! https://htmlacademy.ru/blog/boost/frontend/content-or-decor-img-->
+          <li class="features__item features__box--feature1">
+            <h3 class="features__title">Быстрая доставка</h3>
+            <p class="features__description">Можем собрать букет и передать его в доставку всего за час.</p>
           </li>
 
-          <li class="features__item">
-            <!--грид элемент-->
-            <div class="features__box features__box--feature2">
-              <h3 class="features__title">Всегда свежие цветы</h3>
-              <p class="features__description">Тщательно следим за состоянием цветов, а опытные флористы отбирают для
-                букетов каждый цветок.</p>
-            </div>
+          <!--грид элемент-->
+          <li class="features__item features__box--feature2">
+            <h3 class="features__title">Всегда свежие цветы</h3>
+            <p class="features__description">Тщательно следим за состоянием цветов, а опытные флористы отбирают для
+              букетов каждый цветок.</p>
           </li>
 
-          <li class="features__item">
-            <!--грид элемент-->
-            <div class="features__box features__box--feature3">
-              <h3 class="features__title">Отправляем фото цветов</h3>
-              <p class="features__description">Перед доставкой сделаем фотографию букета и отправим вам.</p>
-            </div>
+          <!--грид элемент-->
+          <li class="features__item features__box--feature3">
+            <h3 class="features__title">Отправляем фото цветов</h3>
+            <p class="features__description">Перед доставкой сделаем фотографию букета и отправим вам.</p>
           </li>
         </ul>
       </div>
@@ -106,16 +101,14 @@
     <section class="popular">
       <div class="container">
         <div class="title">Популярные букеты</div>
-        <div class="slider">
-          <!--popular__inner-->
+        <div class="popular__slider slider">
           <div class="slider__item">
-            <!--popular__box-->
             <div class="slider__description">
-              <h3 class="popular__title">Букет «Нежность»</h3>
-              <p class="popular__description">Элегантный букет, который станет отличным подарком на день рождения или
+              <h3 class="slider__title">Букет «Нежность»</h3>
+              <p class="slider__text">Элегантный букет, который станет отличным подарком на день рождения или
                 юбилей.</p>
-              <p class="popular__size">30 × 40 см</p>
-              <p class="popular price">3600 руб.</p>
+              <p class="slider__size">30 × 40 см</p>
+              <p class="slider__price">3600 руб.</p>
               <a href="#" class="button">Заказать</a>
             </div>
             <img class="slider__preview" src="img/1.png" width="387" height="438" alt="buket">
@@ -136,34 +129,25 @@
     <section class="feature-buckets">
       <div class="container">
         <ul class="feature-buckets__list">
-          <li class="feature-buckets__item">
-            <a href="">
+          <li class="feature-buckets__item feature-buckets__item--wedding">
+            <a class="feature-buckets__link" href="">
               <!--картинки извлечь в флрмате jpeg-->
-              <img class="feature-buckets__img" src="img/bucket1.png" width="388" height="442" alt="item1">
-              <div class="feature-buckets__box">
-                <span class="feature-buckets__title">Свадебные букеты</span>
-                <span class="feature-buckets__description">Букеты для невест</span>
-              </div>
+              <h2 class="feature-buckets__title">Свадебные букеты</h2>
+              <p class="feature-buckets__description">Букеты для невест</p>
             </a>
           </li>
 
-          <li class="feature-buckets__item">
-            <a href="">
-              <img class="feature-buckets__img" src="img/bucket2.png" width="388" height="442" alt="item2">
-              <div class="feature-buckets__box">
-                <span class="feature-buckets__title">Букеты с пионами</span>
-                <span class="feature-buckets__description">Букеты с сезонными пионами</span>
-              </div>
+          <li class="feature-buckets__item feature-buckets__item--pions">
+            <a class="feature-buckets__link" href="">
+              <h2 class="feature-buckets__title">Букеты с пионами</h2>
+              <p class="feature-buckets__description">Букеты с сезонными пионами</p>
             </a>
           </li>
 
-          <li class="feature-buckets__item">
-            <a href="">
-              <img class="feature-buckets__img" src="img/bucket3png.png" width="388" height="442" alt="item3">
-              <div class="feature-buckets__box">
-                <span class="feature-buckets__title">Выбрать букет</span>
-                <span class="feature-buckets__description">Букеты в ассортименте</span>
-              </div>
+          <li class="feature-buckets__item feature-buckets__item--assortiment">
+            <a class="feature-buckets__link" href="">
+              <h2 class="feature-buckets__title">Выбрать букет</h2>
+              <p class="feature-buckets__description">Букеты в ассортименте</p>
             </a>
           </li>
         </ul>
@@ -189,25 +173,25 @@
       <div class="container">
         <div class="title">4 шага к идеальному букету</div>
         <ul class="steps__list">
-          <li class="steps__item">
+          <li class="steps__item steps__item--order">
             <!-- декоративное изображение это сделат псевдоэлементом <img class="steps__image" src="img/step1.svg" width="66" height="52" alt="order">-->
             <h3 class="steps__title">Заказ</h3>
             <p class="steps__descriptionqs">Выбирите понравившейся букет из каталога и оформите заказ</p>
           </li>
 
-          <li class="steps__item">
+          <li class="steps__item steps__item--detailes">
             <!--это сделат псевдоэлементом <img class="steps__image" src="img/step2.svg" width="37" height="52" alt="order">-->
             <h3 class="steps__title">Уточнение деталей</h3>
             <p class="steps__descriptionqs">Выбирите понравившейся букет из каталога и оформите заказ</p>
           </li>
 
-          <li class="steps__item">
+          <li class="steps__item steps__item--payment">
             <!--это сделат псевдоэлементом <img class="steps__image" src="img/step3.svg" width="69" height="52" alt="order">-->
             <h3 class="steps__title">Оплата</h3>
             <p class="steps__descriptionqs">Оплатить заказ можно онлайн на сайте или при получении</p>
           </li>
 
-          <li class="steps__item">
+          <li class="steps__item steps__item--delivery">
             <!--<img class="steps__image" src="img/step4.svg" width="82" height="52" alt="order">-->
             <h3 class="steps__title">Доставка</h3>
             <p class="steps__descriptionqs">Курьер позвонит за час до прибытия и доставит заказ вовремя</p>
@@ -220,12 +204,12 @@
       <div class="container">
         <div class="news___inner">
           <div class="news__box">
-            <h2 class="title">Следите за нашими новостями</h2>
+            <h2 class="news__title">Следите за нашими новостями</h2>
             <p class="news__description">Подписывайтесь на наши соцсети и узнавайте о новинках и акциях первым.</p>
             <ul class="news__social social">
-              <li class="social__item"><a href="#">insta</a></li>
-              <li class="social__item"><a href="#">fb</a></li>
-              <li class="social__item"><a href="#">twitter</a></li>
+              <li class="social__item"><a class="social__link social__link--insta" href="#">insta</a></li>
+              <li class="social__item"><a class="social__link social__link--fb" href="#">fb</a></li>
+              <li class="social__item"><a class="social__link social__link--tw" href="#">twitter</a></li>
             </ul>
           </div>
           <div class="news__images">
