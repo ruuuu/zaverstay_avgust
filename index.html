@@ -5,6 +5,8 @@
 <!--фото всегда экспортирвкме в формате jpeg, а если у кртинки есть прозрачность то в png-->
 <!-- sanitize.css  https://github.com/csstools/sanitize.css это как normalize.css но к тому же еще правит еще  и кросс-браузерные баги-->
 <!--Font Fascia(у меня стоит) плагин в фигме котрый показывает какие шрифты используются в макете-->
+<!--картинка и декаративным картикам можно задавать высоту, остальным элеметам нельзя иначе конетнт выпадет за этот блок пр переполнении и использкем min-height-->
+<!--walidatorw3.org-->
 
 <head>
   <meta charset="UTF-8">
@@ -114,11 +116,11 @@
             <img class="slider__preview" src="img/1.png" width="387" height="438" alt="buket">
           </div>
 
-          <div class="slider__controls">
-            <button type="button">
+          <div class="slider__controls controls">
+            <button type="button" class="controls__button controls__button--left">
               <span class="visually-hidden">Назад</span>
             </button>
-            <button type="button">
+            <button type="button" class="controls__button controls__button--right">
               <span class="visually-hidden">Вперед</span>
             </button>
           </div>
@@ -207,9 +209,9 @@
             <h2 class="news__title">Следите за нашими новостями</h2>
             <p class="news__description">Подписывайтесь на наши соцсети и узнавайте о новинках и акциях первым.</p>
             <ul class="news__social social">
-              <li class="social__item"><a class="social__link social__link--insta" href="#">insta</a></li>
-              <li class="social__item"><a class="social__link social__link--fb" href="#">fb</a></li>
-              <li class="social__item"><a class="social__link social__link--tw" href="#">twitter</a></li>
+              <li class="social__item"><a class="social__link social__link--insta" href="#">insta <img src=""></a></li>
+              <li class="social__item"><a class="social__link social__link--fb" href="#">fb<img src=""></a></li>
+              <li class="social__item"><a class="social__link social__link--tw" href="#">twitter<img src=""></a></li>
             </ul>
           </div>
           <div class="news__images">
@@ -305,13 +307,16 @@
 
           <ul class="footer__socials">
             <li class="footer__socials-item">
-              <a class="footer__socials-link" href=""><span class="visually-hidden">Инста</span></a>
+              <a class="footer__socials-link footer__socials-link--insta" href=""><img src="" alt=""><span
+                  class="visually-hidden">Инста</span></a>
             </li>
             <li class="footer__socials-item">
-              <a class="footer__socials-link" href=""><span class="visually-hidden">fb</span></a>
+              <a class="footer__socials-link footer__socials-link--fb" href=""><img src="" alt=""><span
+                  class="visually-hidden">fb</span></a>
             </li>
             <li class="footer__socials-item">
-              <a class="footer__socials-link" href=""><span class="visually-hidden">Twitter</span></a>
+              <a class="footer__socials-link footer__socials-link--twitter" href=""><img src="" alt=""><span
+                  class="visually-hidden">Twitter</span></a>
             </li>
           </ul>
         </div>
