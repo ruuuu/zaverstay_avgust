@@ -43,7 +43,7 @@ a {
 }
 
 h1,
-h1,
+h2,
 h3,
 h4,
 h5,
@@ -54,9 +54,11 @@ p {
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+  max-width: 100%; /* чтоб картинка если она имеет ширbну(в рамзетке) больше чем уродителя , чтоб не выпадалла за контенер(родитель)*/
+  height: auto; /*чтобы изображение не деформировалось и сохраняло свои пропорции.*/
 }
+/*В браузере Safari картинки могут слегка деформироваться даже после добавления им максимальной ширины и автоматической высоты. Проблему можно решить, обернув картинку в любой подходящий тег, например <figure> или <div>.*/
+/*у CSS-свойств max-width и height приоритет выше, чем у атрибутов width и height в разметке.*/
 
 ul {
   list-style: none;
@@ -207,6 +209,7 @@ input[type="radio"].visually-hidden {
 .catalog__block h1{
   grid-row: 1/2;
   width: 100%;
+  margin-bottom: 30px;
   font-family: "Playfair Display", "Arial", serif;
   font-size: 44px;
   line-height: 58px;
@@ -220,7 +223,7 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog__block h2{
-  margin-bottom: 64px;
+  margin-bottom: 32px;
   font-size: 24px;
   line-height: 29px;
   font-weight: 400;
@@ -228,7 +231,10 @@ input[type="radio"].visually-hidden {
 
 .catalog__button{
   display: inline-block;
+  margin-top: 32px;
 }
+
+
 
 .catalog__photo {
   border-radius: 10px;
@@ -240,8 +246,8 @@ input[type="radio"].visually-hidden {
 
 .catalog__photo:first-of-type { /*грид элемент*/
   display: block;
-  /* align-self: end; */
-  /*грид элемент прижмется к низу родителя*/
+  /* align-self: end; выравние элемента по вертикали*/
+  /*грид элемент прижмется к ниженй границе ячейки*/
   margin-top: 50px;
   height: 404px;
   margin-right: 20px;
@@ -250,8 +256,8 @@ input[type="radio"].visually-hidden {
 
 .rose { /*грид элемент*/
   display: block;
-  /* align-self: start; */
-  /*грид элемент прижмется к верху родителя*/
+  /* align-self: start; выравние элемента по вертикали*/
+  /*грид элемент прижмется к верхней граниче ячейки*/
   height: 420px;
 
 }
@@ -261,8 +267,8 @@ input[type="radio"].visually-hidden {
 .features {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  /* grid-template-columns: repeat(auto-fit, 140px); на разных экранах буде раыное число колонок, то есть количество колонок в списке зависело от ширины страницы*/
-  /*grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); на разной щириине экарна числоколноки ширина картчоки будет меняться, мин ширина крточки 140px*/
+  /* для адптивки сделать: grid-template-columns: repeat(auto-fit, 140px); на разных экранах буде раыное число колонок, то есть количество колонок в списке зависело от ширины страницы*/
+  /*grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); на разной щириине экарна число колнок и ширина картчоки будет меняться, мин ширина крточки 140px*/
   column-gap: 45px;
 }
 
@@ -366,11 +372,12 @@ input[type="radio"].visually-hidden {
 
 
 .slider__price{
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 }
 
 .slider__item .button{
   width: 287px;
+  margin-top: 32px;
 }
 
 .slider__preview{
