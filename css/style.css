@@ -21,8 +21,8 @@
 
 body {
   
-  min-width: 1200px;
-  /*ширина контентf*/
+  min-width: 1200px;/*ширина контенат*/
+
   margin: 0;
   padding: 0;
   font-style: normal;
@@ -109,6 +109,7 @@ ul {
 .container {
   width: 1180px;
   /*ширина контента в макете(1200) 1200 = 1180+ паддинги по 10 px*/
+
   max-width: 1220px; 
   margin: 0 auto;
   padding: 0 10px;
