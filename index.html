@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- тэг artcile/section независимый самостоятельный , его можно переиспользоать на др станицах сервиса, можно на этой жн станице переставитьм естами-->
+<!--тэг section  это смысловой блок завситот своего места в потоке, котрый включает в себя маленькие блоки-->
+<!--фото всегда экспортируем в формате jpeg, а если у картинки есть прозрачность то в png-->
+<!-- sanitize.css  https://github.com/csstools/sanitize.css это как normalize.css но к тому же еще правит еще  и кросс-браузерные баги-->
+<!--Font Fascia(у меня стоит) плагин в фигме котрый показывает какие шрифты используются в макете-->
+<!--картинка и декаративным картикам можно задавать высоту, остальным элеметам нельзя иначе конетнт выпадет за этот блок пр переполнении и использкем min-height-->
+<!--walidatorw3.org-->
 
 <head>
   <meta charset="UTF-8">
@@ -7,19 +14,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Playfair+Display:wght@700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
+  <!--стили всегда повключаем после шрифтов-->
   <link rel="stylesheet" href="css/style.css">
   <title>Магазин цветов</title>
 </head>
 
 <body>
-  <header>
+  <header class="header">
     <div class="container">
+      <nav class="header__inner">
+        <!--флекс контегнйер-->
+        <ul class="header__menu menu">
+          <li class="menu__item">
+            <a class="menu__link" href="">Каталог</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="">Доставка и оплата</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="">Отзывы</a>
+          </li>
+        </ul>
 
+        <a href="">
+          <img src="img/Лого.svg" width="100" height="33" alt="logo">
+        </a>
+
+        <ul class="header__menu menu">
+          <li class="menu__item">
+            <a class="menu__link" href="">Спецпредложения</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="">Контакты</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="">Корзина</a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </header>
 
@@ -28,40 +66,36 @@
       <div class="container">
         <div class="author-bukets__catalog catalog">
           <div class="catalog__block">
-            <h1>Авторские букеты<span>в Петербурге<span></h1>
+            <h1>Авторские букеты <span> в Петербурге</span></h1>
             <h2>Оригинальные свежие букеты с доставкой по всему городу</h2>
-            <a class="button" href="">Смотреть каталог</a>
+            <a class="button catalog__button" href="">Смотреть каталог</a>
           </div>
+          <!--скачать изображение в png чтоб не было углков белых у изображений:-->
           <img class="catalog__photo tulpan" src="img/author1.jpg" width="386" height="404" alt="tulpan">
           <img class="catalog__photo rose" src="img/author2.jpg" width="387" height="420" alt="rose">
         </div>
 
         <ul class="author-bukets__features features">
           <!--грид контенйер-->
-          <li class="features__item">
-            <!--грид элемент-->
-            <img class="features__img" src="img/f1.svg" width="82" height="52" alt="delivery">
-            <div>
-              <h3 class="features__title">Быстрая доставка</h3>
-              <p class="features__description">Можем собрать букет и передать его в доставку всего за час.</p>
-            </div>
+
+          <!--грид элемент-->
+          <!--вметсо img вставить псевдоэлемент!!! https://htmlacademy.ru/blog/boost/frontend/content-or-decor-img-->
+          <li class="features__item features__box--feature1">
+            <h3 class="features__title">Быстрая доставка</h3>
+            <p class="features__description">Можем собрать букет и передать его в доставку всего за час.</p>
           </li>
-          <li class="features__item">
-            <!--грид элемент-->
-            <img class="features__img" src="img/f2.svg" width="52" height="52" alt="flowers">
-            <div>
-              <h3 class="features__title">Всегда свежие цветы</h3>
-              <p class="features__description">Тщательно следим за состоянием цветов, а опытные флористы отбирают для
-                букетов каждый цветок.</p>
-            </div>
+
+          <!--грид элемент-->
+          <li class="features__item features__box--feature2">
+            <h3 class="features__title">Всегда свежие цветы</h3>
+            <p class="features__description">Тщательно следим за состоянием цветов, а опытные флористы отбирают для
+              букетов каждый цветок.</p>
           </li>
-          <li class="features__item">
-            <!--грид элемент-->
-            <img class="features__img" src="img/f3.svg" width="59" height="52" alt="photo">
-            <div>
-              <h3 class="features__title">Отправляем фото цветов</h3>
-              <p class="features__description">Перед доставкой сделаем фотографию букета и отправим вам.</p>
-            </div>
+
+          <!--грид элемент-->
+          <li class="features__item features__box--feature3">
+            <h3 class="features__title">Отправляем фото цветов</h3>
+            <p class="features__description">Перед доставкой сделаем фотографию букета и отправим вам.</p>
           </li>
         </ul>
       </div>
@@ -70,16 +104,28 @@
     <section class="popular">
       <div class="container">
         <div class="title">Популярные букеты</div>
-        <div class="popular__inner">
-          <div class="popular__box">
-            <h3 class="popular__title">Букет «Нежность»</h3>
-            <p class="popular__description">Элегантный букет, который станет отличным подарком на день рождения или
-              юбилей.</p>
-            <p class="popular__size">30 × 40 см</p>
-            <p class="popular price">3600 руб.</p>
-            <a href="#" class="button">Заказать</a>
+        
+        <div class="popular__slider slider">
+          <div class="slider__item">
+            <div class="slider__description">
+              <h3 class="slider__title">Букет «Нежность»</h3>
+              <p class="slider__text">Элегантный букет, который станет отличным подарком на день рождения или
+                юбилей.</p>
+              <p class="slider__size">30 × 40 см</p>
+              <p class="slider__price">3600 руб.</p>
+              <a href="#" class="button">Заказать</a>
+            </div>
+            <img class="slider__preview" src="img/1.png" width="387" height="438" alt="buket">
           </div>
-          <img src="img/1.png" width="387" height="438" alt="buket">
+
+          <div class="slider__controls controls">
+            <button type="button" class="controls__button controls__button--left">
+              <span class="visually-hidden">Назад</span>
+            </button>
+            <button type="button" class="controls__button controls__button--right">
+              <span class="visually-hidden">Вперед</span>
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -87,28 +133,26 @@
     <section class="feature-buckets">
       <div class="container">
         <ul class="feature-buckets__list">
-          <li class="feature-buckets__item">
-            <img class="feature-buckets__img" src="img/bucket1.png" width="388" height="442" alt="item1">
-            <div class="feature-buckets__box">
-              <span class="feature-buckets__title">Свадебные букеты</span>
-              <span class="feature-buckets__description">Букеты для невест</span>
-            </div>
+          <li class="feature-buckets__item feature-buckets__item--wedding">
+            <a class="feature-buckets__link" href="">
+              <!--картинки извлечь в флрмате jpeg-->
+              <h2 class="feature-buckets__title">Свадебные букеты</h2>
+              <p class="feature-buckets__description">Букеты для невест</p>
+            </a>
           </li>
 
-          <li class="feature-buckets__item">
-            <img class="feature-buckets__img" src="img/bucket2.png" width="388" height="442" alt="item2">
-            <div class="feature-buckets__box">
-              <span class="feature-buckets__title">Букеты с пионами</span>
-              <span class="feature-buckets__description">Букеты с сезонными пионами</span>
-            </div>
+          <li class="feature-buckets__item feature-buckets__item--pions">
+            <a class="feature-buckets__link" href="">
+              <h2 class="feature-buckets__title">Букеты с пионами</h2>
+              <p class="feature-buckets__description">Букеты с сезонными пионами</p>
+            </a>
           </li>
 
-          <li class="feature-buckets__item">
-            <img class="feature-buckets__img" src="img/bucket3png.png" width="388" height="442" alt="item3">
-            <div class="feature-buckets__box">
-              <span class="feature-buckets__title">Выбрать букет</span>
-              <span class="feature-buckets__description">Букеты в ассортименте</span>
-            </div>
+          <li class="feature-buckets__item feature-buckets__item--assortiment">
+            <a class="feature-buckets__link" href="">
+              <h2 class="feature-buckets__title">Выбрать букет</h2>
+              <p class="feature-buckets__description">Букеты в ассортименте</p>
+            </a>
           </li>
         </ul>
       </div>
@@ -123,15 +167,163 @@
             <div class="discount__text">Если заказываете у нас букет впервые — при оформлении заказа введите промокод
               «Botanika2021» и получите скидку 10%.</div>
           </div>
-          <img class="discount__image" src="img/florist.png" width="590" heiht="391" alt="discount__image">
+          <!--фото извлчь в jpeg-->
+          <img class="discount__image" src="img/florist.png" width="590" height="391" alt="discount__image">
         </div>
       </div>
     </section>
 
+    <section class="steps">
+      <div class="container">
+        <div class="title">4 шага к идеальному букету</div>
+        
+        <ul class="steps__list">
+          <li class="steps__item steps__item--order">
+            <!-- декоративное изображение это сделат псевдоэлементом <img class="steps__image" src="img/step1.svg" width="66" height="52" alt="order">-->
+            <h3 class="steps__title">Заказ</h3>
+            <p class="steps__descriptionqs">Выбирите понравившейся букет из каталога и оформите заказ</p>
+          </li>
+
+          <li class="steps__item steps__item--detailes">
+            <!--это сделат псевдоэлементом <img class="steps__image" src="img/step2.svg" width="37" height="52" alt="order">-->
+            <h3 class="steps__title">Уточнение деталей</h3>
+            <p class="steps__descriptionqs">Выбирите понравившейся букет из каталога и оформите заказ</p>
+          </li>
+
+          <li class="steps__item steps__item--payment">
+            <!--это сделат псевдоэлементом <img class="steps__image" src="img/step3.svg" width="69" height="52" alt="order">-->
+            <h3 class="steps__title">Оплата</h3>
+            <p class="steps__descriptionqs">Оплатить заказ можно онлайн на сайте или при получении</p>
+          </li>
+
+          <li class="steps__item steps__item--delivery">
+            <!--<img class="steps__image" src="img/step4.svg" width="82" height="52" alt="order">-->
+            <h3 class="steps__title">Доставка</h3>
+            <p class="steps__descriptionqs">Курьер позвонит за час до прибытия и доставит заказ вовремя</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="news">
+      <div class="container">
+        <div class="news___inner">
+          <div class="news__box">
+            <h2 class="news__title">Следите за нашими новостями</h2>
+            <p class="news__description">Подписывайтесь на наши соцсети и узнавайте о новинках и акциях первым.</p>
+            <ul class="news__social social">
+              <li class="social__item"><a class="social__link social__link--insta" href="#">insta <img src=""></a></li>
+              <li class="social__item"><a class="social__link social__link--fb" href="#">fb<img src=""></a></li>
+              <li class="social__item"><a class="social__link social__link--tw" href="#">twitter<img src=""></a></li>
+            </ul>
+          </div>
+          <div class="news__images">
+            <!--так как фото поэтому  jpeg-->
+            <img src="img/new1.png" width="285" height="220" alt="new1">
+            <img src="img/new3.jpg" width="387" height="460" alt="new3">
+            <img src="img/new2.jpg" width="285" height="220" alt="new2">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <div class="container">
+        <div class="reviews__inner">
+          <div class="title">Отзывы</div>
+
+          <ul class="reviews__list">
+            <li class="reviews__item">
+              <p class="reviews__description">Всё очень понравилось! Быстрое оформление заказа, выбор удобного времени
+                доставки. Всем большое спасибо!</p>
+              <span class="reviews__author">Марина</span>
+            </li>
+            <li class="reviews__item">
+              <p class="reviews__description">Внимательные флористы, вежливые. Магазин находится прям рядом с метро.
+                Букет
+                очень понравился, буду ещё заказывать!</p>
+              <span class="reviews__author">Татьяна</span>
+            </li>
+            <li class="reviews__item">
+              <p class="reviews__description">Выбор букетов на любой вкус и цену. Бывают хорошие скидки, а флористы
+                всегда
+                помогут и точно соберут красивый букет!</p>
+              <span class="reviews__author">Ольга</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <div class="container">
+  <footer class="footer">
+
+    <iframe class="footer__map"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2243.2443178324074!2d49.12772765092077!3d55.78899539657286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415ead1200f36adb%3A0x777489d5da1a528b!2z0YPQuy4g0J3QtdC60YDQsNGB0L7QstCwLCAyMSwg0JrQsNC30LDQvdGMLCDQoNC10YHQvy4g0KLQsNGC0LDRgNGB0YLQsNC9LCA0MjAwMTI!5e0!3m2!1sru!2sru!4v1587413590267!5m2!1sru!2sru"
+      frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+    </iframe>
+
+    <div class="footer__offer offer">
+      <h3 class="offer__title">Мы ждем вас</h3>
+      <p class="offer__info">
+        <span class="offer__text">Приходите к нам:</span>
+        <span class="offer__text">Санкт-Петербург, ул. Большая Конюшенная, 19</span>
+      </p>
+      <p class="offer__info">
+        <span class="offer__text">Режим работы:</span>
+        <span class="offer__text">Пн-Вск, с 9-00 до 20-00</span>
+      </p>
+      <p class="offer__info">
+        <span class="offer__text">Позвоните нам:</span>
+        <a href="tel:+78129834719" class="offer__text">+ 7 (812) 983-47-19</a>
+      </p>
+      <p class="offer__info">
+        <span class="offer__text">Напишите нам:</span>
+        <a href="mailto:info@botanika.ru" class="offer__text">info@botanika.ru</a>
+      </p>
+    </div>
+
+    <div class="footer__background">
+      <div class="container">
+        <div class="footer__links">
+          <div class="footer__logo">
+            <a href=""><img src="img/logo-footer.svg" width="100" height="33" alt="logo-footer"></a>
+          </div>
+
+          <ul class="footer__menu">
+            <li class="footer__menu-item">
+              <a class="footer__menu-links" href="">Каталог</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-links" href="">Доставка и оплата</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-links" href="">Отзывы</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-links" href="">Спецпредложения</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-links" href="">Контакты</a>
+            </li>
+          </ul>
+
+          <ul class="footer__socials">
+            <li class="footer__socials-item">
+              <a class="footer__socials-link footer__socials-link--insta" href=""><img src="" alt=""><span
+                  class="visually-hidden">Инста</span></a>
+            </li>
+            <li class="footer__socials-item">
+              <a class="footer__socials-link footer__socials-link--fb" href=""><img src="" alt=""><span
+                  class="visually-hidden">fb</span></a>
+            </li>
+            <li class="footer__socials-item">
+              <a class="footer__socials-link footer__socials-link--twitter" href=""><img src="" alt=""><span
+                  class="visually-hidden">Twitter</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
     </div>
   </footer>
