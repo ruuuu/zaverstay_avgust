@@ -9,12 +9,10 @@
 <!--тэг section  это смысловой блок завситот своего места в потоке, котрый включает в себя маленькие блоки-->
 <!--фото всегда экспортирвкме в формате jpeg, а если у кртинки есть прозрачность то в png-->
 
-<!-- sanitize.css  https://github.com/csstools/sanitize.css это как normalize.css но к тому же еще правит еще  и кросс-браузерные баги-->
+<!-- sanitize.css  https://github.com/csstools/sanitize.css это как normalize.css но к тому же еще правит и кросс-браузерные баги-->
 <!--Font Fascia(у меня стоит) плагин в фигме котрый показывает какие шрифты используются в макете-->
 <!--картинка и декаративным картикам можно задавать высоту, остальным элеметам нельзя иначе конетнт выпадет за этот блок пр переполнении и использкем min-height-->
 <!--walidatorw3.org-->
-  
-  <!--  нужно помнить, что JPEG сжимает изображения с потерей качества. Поэтому если мы хотим уменьшить вес изображения, то придётся ухудшать его внешний вид. Главная задача при работе с JPEG — подобрать такой уровень сжатия, чтобы и вес, и качество картинки были приемлемыми.-->
 
 <head>
   <meta charset="UTF-8">
@@ -113,7 +111,7 @@
       <div class="container">
         <div class="title">Популярные букеты</div>
 
-       
+
         <div class="popular__slider slider">
           <div class="slider__item">
             <div class="slider__description">
@@ -129,6 +127,7 @@
 
           <div class="slider__controls controls">
             <button type="button" class="controls__button controls__button--left">
+              <!-- этот элемент доступно скроем, т е  скриеридеры(для слепых люднй пр навдени на эелмент6 скринридер его произнесет вслух) его увидят:-->
               <span class="visually-hidden">Назад</span>
             </button>
             <button type="button" class="controls__button controls__button--right">
@@ -186,7 +185,7 @@
       <div class="container">
         <div class="title">4 шага к идеальному букету</div>
 
-       
+
         <ul class="steps__list">
           <li class="steps__item steps__item--order">
             <!-- декоративное изображение это сделат псевдоэлементом <img class="steps__image" src="img/step1.svg" width="66" height="52" alt="order">-->

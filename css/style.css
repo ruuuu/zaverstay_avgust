@@ -14,22 +14,26 @@
       url("../fonts/Montserrat.woff") format("woff");
 } */
 
-*, *::before, *::after {
-  box-sizing: border-box; /*border и padding входят в ширину контента*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /*border и padding входят в ширину контента*/
 }
 
 
 body {
-  
-  min-width: 1200px;/*ширина контенат*/
 
+  min-width: 1200px;
+  /*ширина контенат*/
   margin: 0;
   padding: 0;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  font-family: "Montserrat", "Arial", sans-serif; /*sans-serif значит без засечек*/
+  font-family: "Montserrat", "Arial", sans-serif;
+  /*sans-serif значит без засечек*/
   color: rgba(174, 124, 120, 1);
   background-color: white;
   font-stretch: normal;
@@ -54,9 +58,12 @@ p {
 }
 
 img {
-  max-width: 100%; /* чтоб картинка если она имеет ширbну(в рамзетке) больше чем уродителя , чтоб не выпадалла за контенер(родитель)*/
-  height: auto; /*чтобы изображение не деформировалось и сохраняло свои пропорции.*/
+  max-width: 100%;
+  /* чтоб картинка если она имеет ширbну(в рамзетке) больше чем уродителя , чтоб не выпадалла за контенер(родитель)*/
+  height: auto;
+  /*чтобы изображение не деформировалось и сохраняло свои пропорции.*/
 }
+
 /*В браузере Safari картинки могут слегка деформироваться даже после добавления им максимальной ширины и автоматической высоты. Проблему можно решить, обернув картинку в любой подходящий тег, например <figure> или <div>.*/
 /*у CSS-свойств max-width и height приоритет выше, чем у атрибутов width и height в разметке.*/
 
@@ -102,15 +109,17 @@ ul {
   font-weight: 700;
   font-size: 36px;
   line-height: 48px;
-  font-family: "Playfair Display", serif; /*serif значит с засечками*/
-  letter-spacing: 0.02 em; /*превратиь % в em */
+  font-family: "Playfair Display", serif;
+  /*serif значит с засечками*/
+  letter-spacing: 0.02 em;
+  /*превратиь % в em */
 }
 
 .container {
   width: 1180px;
   /*ширина контента в макете(1200) 1200 = 1180+ паддинги по 10 px*/
 
-  max-width: 1220px; 
+  max-width: 1220px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -126,9 +135,7 @@ input[type="radio"].visually-hidden {
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
-
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -158,7 +165,7 @@ input[type="radio"].visually-hidden {
 }
 
 
-.menu__item{
+.menu__item {
   flex-grow: 1;
 }
 
@@ -176,7 +183,7 @@ input[type="radio"].visually-hidden {
 }
 
 .menu__link:hover,
-.menu__link:focus{
+.menu__link:focus {
   color: rgba(216, 153, 153, 1);
 }
 
@@ -204,10 +211,10 @@ input[type="radio"].visually-hidden {
 
 .catalog__block {
   width: 384px;
-  
+
 }
 
-.catalog__block h1{
+.catalog__block h1 {
   grid-row: 1/2;
   width: 100%;
   margin-bottom: 30px;
@@ -219,18 +226,18 @@ input[type="radio"].visually-hidden {
 }
 
 
-.catalog__block span{
+.catalog__block span {
   font-style: italic;
 }
 
-.catalog__block h2{
+.catalog__block h2 {
   margin-bottom: 32px;
   font-size: 24px;
   line-height: 29px;
   font-weight: 400;
 }
 
-.catalog__button{
+.catalog__button {
   display: inline-block;
   margin-top: 32px;
 }
@@ -240,12 +247,13 @@ input[type="radio"].visually-hidden {
 .catalog__photo {
   border-radius: 10px;
   border: none;
-  
+
 }
 
 
 
-.catalog__photo:first-of-type { /*грид элемент*/
+.catalog__photo:first-of-type {
+  /*грид элемент*/
   display: block;
   /* align-self: end; выравние элемента по вертикали*/
   /*грид элемент прижмется к ниженй границе ячейки*/
@@ -255,7 +263,8 @@ input[type="radio"].visually-hidden {
 
 }
 
-.rose { /*грид элемент*/
+.rose {
+  /*грид элемент*/
   display: block;
   /* align-self: start; выравние элемента по вертикали*/
   /*грид элемент прижмется к верхней граниче ячейки*/
@@ -275,36 +284,40 @@ input[type="radio"].visually-hidden {
 
 
 
-.features__item{ /*родитель для иконки, относительно этого позиционируем иконки*/
+.features__item {
+  /*родитель для иконки, относительно этого позиционируем иконки*/
   position: relative;
-  padding-left: 102px; /*метсо для иконки*/
+  padding-left: 102px;
+  /*метсо для иконки*/
 }
 
 
-.features__item::before{ /*псевдоэлмент карткна слева*/
+.features__item::before {
+  /*псевдоэлмент карткна слева*/
   content: "";
   position: absolute;
-  
-  left: 0; /*расстояние от левоо края родителя до левого края элемента*/
+  left: 0;
+  /*расстояние от левоо края родителя до левого края элемента*/
   width: 82px;
   height: 52px;
 }
 
-.features__box--feature1{
+.features__box--feature1 {
   background-image: url("../img/f1.svg");
   background-size: 82px 52px;
-  background-position: 0 0; /*кордината верхнего левого угла*/
+  background-position: 0 0;
+  /*кордината верхнего левого угла*/
   background-repeat: no-repeat;
-} 
+}
 
-.features__box--feature2{
+.features__box--feature2 {
   background-image: url("../img/f2.svg");
   background-size: 52px 52px;
   background-position: 0 0;
   background-repeat: no-repeat;
 }
 
-.features__box--feature3{
+.features__box--feature3 {
   background-image: url("../img/f3.svg");
   background-size: 58px 52px;
   background-position: 0 0;
@@ -330,9 +343,7 @@ input[type="radio"].visually-hidden {
 .features__description {
   width: 285px;
   font-weight: 400;
-
 }
-
 
 
 .slider {
@@ -350,60 +361,63 @@ input[type="radio"].visually-hidden {
 
 .slider__item {
   /*лекс элеомент*/
-  width: 794px; 
+  width: 794px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 20px;
 }
 
-.slider__description{
+.slider__description {
   display: flex;
   flex-direction: column;
   width: 397px;
 }
 
 
-.slider__title{
+.slider__title {
   margin-bottom: 20px;
 }
 
-.slider__text, .slider__size{
+.slider__text,
+.slider__size {
   margin-bottom: 24px;
 }
 
 
-.slider__price{
+.slider__price {
   margin-bottom: 32px;
 }
 
-.slider__item .button{
+.slider__item .button {
   width: 287px;
   margin-top: 32px;
 }
 
-.slider__preview{
+.slider__preview {
   width: 387px;
   height: 438px;
 }
 
-.slider__controls{
+.slider__controls {
   display: flex;
   justify-content: space-between;
 }
 
 
-.controls__button{
+.controls__button {
   width: 50px;
   height: 16px;
   border: none;
 }
 
-.controls__button--left{
-  background-image: url(""); /*стрелка влево*/
+.controls__button--left {
+  background-image: url("");
+  /*стрелка влево*/
 }
 
-.controls__button--right{
-  background-image: url(""); /*стрелка влево*/
+.controls__button--right {
+  background-image: url("");
+  /*стрелка влево*/
 }
 
 .feature-buckets {
@@ -417,38 +431,41 @@ input[type="radio"].visually-hidden {
 }
 
 .feature-buckets__item {
-  
+
   border-radius: 10px;
   background-size: 388px 442px;
   background-position: center;
   background-size: cover;
-  background-color: rgba(216, 153, 153, 1); 
-  height: 100%; /*чтоб при переполнении  текстом, тянулся фон и изображение*/
+  background-color: rgba(216, 153, 153, 1);
+  height: 100%;
+  /*чтоб при переполнении  текстом, тянулся фон и изображение*/
 }
 
 
-.feature-buckets__item--wedding{
+.feature-buckets__item--wedding {
   background-image: url("../img/bucket1.png");
 }
 
-.feature-buckets__item--pions{
+.feature-buckets__item--pions {
   background-image: url("../img/bucket2.png");
 }
 
-.feature-buckets__item--assortiment{
+.feature-buckets__item--assortiment {
   background-image: url("../img/bucket3png.png");
 }
 
 
-.feature-buckets__link{ /*a*/
+.feature-buckets__link {
+  /*a*/
   display: flex;
   flex-direction: column;
-  
+
   justify-content: center;
   align-items: center;
   padding: 20px;
-  min-height: 440px; /*для переполнения блока текстом, чтоб не выпададл за рамки ссылки*/
-  
+  min-height: 440px;
+  /*для переполнения блока текстом, чтоб не выпададл за рамки ссылки*/
+
 }
 
 
@@ -459,7 +476,7 @@ input[type="radio"].visually-hidden {
   color: #fff;
   display: block;
   margin: 0 auto;
-  
+
 }
 
 .feature-buckets__title {
@@ -472,7 +489,7 @@ input[type="radio"].visually-hidden {
 
 
 .discount {
-  
+
   margin-bottom: 80px;
 }
 
@@ -508,42 +525,47 @@ input[type="radio"].visually-hidden {
 }
 
 .steps__item {
-  position: relative; /*отноистельн этого элемента позициониурем псевдоэдемент-иконку*/
+  position: relative;
+  /*отноистельн этого элемента позициониурем псевдоэдемент-иконку*/
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 60px; /*место для иконок*/
+  padding-top: 60px;
+  /*место для иконок*/
   max-width: 285px;
-  min-height: 60px; /*для преплнения тектсом, что*/
+  min-height: 60px;
+  /*для преплнения тектсом, что*/
 }
 
-.steps__item::before{
+.steps__item::before {
   content: '';
   position: absolute;
-  left: 50%; /*по центеру чтоб была иконка*/
+  left: 50%;
+  /*по центеру чтоб была иконка*/
   top: 0;
-  transform: translate(-50%);/*чтоб отцентровать иконку*/
+  transform: translate(-50%);
+  /*чтоб отцентровать иконку*/
 }
 
-.steps__item--order::before{
+.steps__item--order::before {
   background-image: url("../img/step1.svg");
   width: 66px;
   height: 52px;
 }
 
-.steps__item--detailes::before{
+.steps__item--detailes::before {
   background-image: url("../img/step2.svg");
   width: 37px;
   height: 52px;
 }
 
-.steps__item--payment::before{
+.steps__item--payment::before {
   background-image: url("../img/step3.svg");
   width: 70px;
   height: 52px;
 }
 
-.steps__item--delivery::before{
+.steps__item--delivery::before {
   background-image: url("../img/step4.svg");
   width: 82px;
   height: 52px;
@@ -565,52 +587,55 @@ input[type="radio"].visually-hidden {
   margin-bottom: 80px;
 }
 
-.news___inner{
+.news___inner {
   display: flex;
-  
+
 }
 
 
-.news__box{
+.news__box {
   flex-direction: column;
   align-items: flex-start;
   width: 508px;
 }
 
-.news__title{
+.news__title {
   text-align: left;
   margin-top: 96px;
 }
 
-.news__images{
+.news__images {
   display: grid;
   grid-template-columns: 285px 387px;
-  grid-template-rows: 220px 220px; 
+  grid-template-rows: 220px 220px;
   gap: 20px;
-  
+
 }
 
-.news__images img{
-  
+.news__images img {
+
   background-color: rgba(174, 124, 120, 1);
 }
 
-.news__images img:nth-of-type(2){ /*2-ой грид элемент*/
-  grid-row: span 2; /*растягиваем элемент на 2 ряда*/
+.news__images img:nth-of-type(2) {
+  /*2-ой грид элемент*/
+  grid-row: span 2;
+  /*растягиваем элемент на 2 ряда*/
   /*либо вметсо арсятгивания можно было указать grid-row: 2/3 */
 }
 
-.news__social{
+.news__social {
   display: flex;
 }
 
-.social__link{
+.social__link {
   height: 20px;
 }
 
 
-.social__link--insta{
-  width: 21px; /*рамер иконки*/
+.social__link--insta {
+  width: 21px;
+  /*рамер иконки*/
   background-image: url("../img/");
   background-position: 0 0;
 }
@@ -643,7 +668,8 @@ input[type="radio"].visually-hidden {
 
 
 .footer {
-  position: relative; /*баннер позиционмуем отноистельно этго */
+  position: relative;
+  /*баннер позиционмуем отноистельно этго */
 }
 
 
@@ -664,13 +690,15 @@ input[type="radio"].visually-hidden {
 .footer__offer {
   /*блок с объявлением , элементы в котром находиться екст лушче  не позиционаровать абсолютно, луше карту сму позиционароить*/
   position: absolute;
-  
-  top: 52px; /*расстоягние от верхнего края карты до верхнего края баннера*/
-  left: 222px; /*расстоягние от левого края карты до левого края баннера*/
+
+  top: 52px;
+  /*расстоягние от верхнего края карты до верхнего края баннера*/
+  left: 222px;
+  /*расстоягние от левого края карты до левого края баннера*/
   width: 386px;
   /* min-height: 520px; */
- 
-  
+
+
   background-color: rgba(247, 250, 252, 1);
   border-radius: 12px;
   padding: 35px 40px;
@@ -710,7 +738,7 @@ input[type="radio"].visually-hidden {
   width: 97px;
 }
 
-.footer__socials-link--insta{
+.footer__socials-link--insta {
   background-image: url("");
   width: 26px;
 }
